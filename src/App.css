@@ -1,38 +1,505 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+
+
+}
+
+img:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.6s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 80px;
+  background-color: #83e5
+}
+
+.rightSide :link {
+  margin-right: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  font-size: 20px;
+  color: black;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px 10px;
+  z-index: 1;
+  position: relative;
+}
+
+.rightSide a::before {
+  content: '';
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background-color: rgba(16, 122, 132, .5);
+  transition: .3s;
+  border-radius: 10px;
+
+}
+
+.rightSide a:hover::before {
+  height: 100%;
+
+  animation: shake 0.6s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@media (max-width: 680px) {
+  .leftSide img {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .rightSide a {
+    margin-right: 4px;
+
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 3px
+  }
+}
+
+@media (max-width: 380px) {
+  .leftSide img {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .rightSide :link {
+    margin-right: 4px;
+    font-size: 10px;
+
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 3px
+  }
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.headerContainer {
+  width: 100%;
+  height: -50px;
+  margin-left: 20px
+}
+
+.headerContainer h1 {
+  font-size: 90px;
+  height: 60px;
+  color: #fff;
+  font-weight: 600;
+
+}
+
+.headerContainer p {
+  color: #fff;
+  font-size: 40px;
+  margin-top: 80px;
+  margin-bottom: 15px;
+}
+
+.headerContainer button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 35px;
+  background-color: black;
+  color: #fff;
+  font-size: 30px;
+  box-sizing: border-box;
+  margin: 10px;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+
+}
+
+.headerContainer button:hover {
+  color: red;
+  transition: 1s;
+  animation: shake 0.6s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+
+
+}
+
+/* footer start */
+
+.footer {
+  width: 100%;
+  height: 80px;
+  background-color: #83e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.socialMedia {
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* menu start */
+
+.menu {
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+  padding: 20px;
+  background-image: linear-gradient(to right, rgb(122, 110, 110), rgb(156, 210, 109), rgb(230, 125, 125));
+  ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menuTitle {
+  font-size: 35px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menuList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.menuItem {
+  background-color: aqua;
+  width: 350px;
+  height: 350px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .5s;
+
+}
+
+.menuItem:hover {
+
+  transform: scale(1.05);
+
+}
+
+.menuItem img {
+  width: 340px;
+  height: 250px;
+}
+
+.menuItem h3 {
+  font-size: 20px;
+  color: rgb(122, 110, 110);
+  font-weight: 700;
+  margin-top: 10px
+}
+
+.menuItem h2 {
+  color: rgb(122, 110, 110);
+  margin-top: 10px;
+
+}
+
+.about {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background-image: url(../src/assets/1beef.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+
+}
+
+.aboutTop {
+  width: 100%;
+  height: 80%;
+}
+
+
+.aboutBottom {
+  background-color: #2cb978;
+  width: 100%;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 5px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.aboutBottom p {
+  margin-top: 20px;
+  width: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.contact .leftSide {
+  height: 100%;
+  flex: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+.contact .rightSide {
+  height: 100%;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.contact .rightSide h1 {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  padding: 20px
+}
+
+#contact-form {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+
+}
+
+form input {
+  height: 40px;
+  width: 80%;
+  border: none;
+  margin-bottom: 20px;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+}
+
+form textarea {
+  width: 80%;
+  height: 250px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  font-size: 20px;
+}
+
+form button {
+  width: 10%;
+  box-shadow: #4e5f58 3px 4px 5px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: white;
+
+}
+
+form label {
+  color: #4e5f58;
+  font-size: 25px;
+  font-weight: 600;
 }
